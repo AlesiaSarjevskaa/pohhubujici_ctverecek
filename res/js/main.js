@@ -17,10 +17,14 @@ class Pleyer {
     if (keys["s"]) this.y += this.v;
     if (keys["a"]) this.x -= this.v;
     if (keys["d"]) this.x += this.v;
+    if (keys[" "]) {
+      this.w -= this.v;
+      this.h -= this.v;
+    }
   }
 }
 
-const myPlayer = new Pleyer(10, 10, 50, 50, "red", 5);
+const myPlayer = new Pleyer(10, 10, 50, 50, "pink", 5);
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
