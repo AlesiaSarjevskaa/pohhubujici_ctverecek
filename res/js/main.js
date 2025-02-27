@@ -21,6 +21,11 @@ class Pleyer {
       this.w -= this.v;
       this.h -= this.v;
     }
+    if (keys["k"]) {
+      this.v += maxV;
+    } else {
+      this.v = this.basicV;
+    }
   }
 }
 
@@ -43,7 +48,7 @@ window.addEventListener("keydown", (e) => (keys[e.key] = true));
 window.addEventListener("keyup", (e) => (keys[e.key] = false));
 
 const gameLoop = () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   myPlayer.update(keys);
   myPlayer.draw(ctx);
   requestAnimationFrame(gameLoop);
