@@ -29,7 +29,7 @@ class Pleyer {
   }
 }
 
-const myPlayer = new Pleyer(10, 10, 50, 50, "pink", 5);
+const myPlayer = new Pleyer(10, 10, 50, 50, "black", 5);
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
